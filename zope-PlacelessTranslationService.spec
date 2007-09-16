@@ -1,23 +1,24 @@
-%define product         PlacelessTranslationService
-%define version         1.3.4
-%define release         1
+%define Product PlacelessTranslationService
+%define product placelesstranslationservice
+%define name    zope-%{Product}
+%define version 1.4.4
+%define release %mkrel 1
 
 %define zope_minver     2.7
-
 %define zope_home       %{_prefix}/lib/zope
 %define software_home   %{zope_home}/lib/python
 
-Summary:        PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
-Name:           zope-%{product}
-Version:        %{version}
-Release:        %mkrel %{release}
-License:        GPL
-Group:          System/Servers
-Source:         http://plone.org/products/pts/releases/%{version}/PlacelessTranslationService-%{version}.tar.bz2
-URL:            http://plone.org/products/pts
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:      noarch
-Requires:       zope >= %{zope_minver}
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:    PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
+License:    GPL
+Group:      System/Servers
+URL:        http://plone.org/products/%{product}
+Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
+Requires:   zope >= %{zope_minver}
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing)
@@ -25,7 +26,7 @@ software for Zope 2.
 It's based on the files supported by the GNU gettext set of utilities.
 
 %prep
-%setup -c
+%setup -c -q
 
 %build
 # Not much, eh? :-)
@@ -51,7 +52,7 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(0644, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
 
 
