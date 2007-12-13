@@ -1,21 +1,21 @@
 %define Product PlacelessTranslationService
 %define product placelesstranslationservice
 %define name    zope-%{Product}
-%define version 1.4.4
+%define version 1.4.6
 %define release %mkrel 1
 
 %define zope_minver     2.7
 %define zope_home       %{_prefix}/lib/zope
 %define software_home   %{zope_home}/lib/python
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       %{name}
+Version:    %{version}
+Release:    %{release}
 Summary:    PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
 License:    GPL
 Group:      System/Servers
 URL:        http://plone.org/products/%{product}
-Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
+Source:     http://plone.org/products/pts/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:   zope >= %{zope_minver}
 BuildArch:  noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
@@ -54,6 +54,4 @@ fi
 %files
 %defattr(-,root,root)
 %{software_home}/Products/*
-
-
 
