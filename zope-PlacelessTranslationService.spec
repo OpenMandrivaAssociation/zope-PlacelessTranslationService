@@ -18,7 +18,6 @@ URL:        http://plone.org/products/%{product}
 Source:     http://plone.org/products/pts/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:   zope >= %{zope_minver}
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing)
