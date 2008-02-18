@@ -11,7 +11,7 @@
 Name:       %{name}
 Version:    %{version}
 Release:    %{release}
-Summary:    PTS is a way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
+Summary:    Way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
 License:    GPL
 Group:      System/Servers
 URL:        http://plone.org/products/%{product}
