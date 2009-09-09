@@ -2,7 +2,7 @@
 %define product placelesstranslationservice
 %define name    zope-%{Product}
 %define version 1.4.6
-%define release %mkrel 5
+%define release %mkrel 6
 
 %define zope_minver     2.7
 %define zope_home       %{_prefix}/lib/zope
