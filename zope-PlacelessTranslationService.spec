@@ -14,7 +14,7 @@ Release:    %{release}
 Summary:    Way of internationalizing (i18n'ing) and localizing (l10n'ing) software for Zope 2
 License:    GPL
 Group:      System/Servers
-URL:        http://plone.org/products/%{product}
+URL:        https://plone.org/products/%{product}
 Source:     http://plone.org/products/pts/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:   zope >= %{zope_minver}
 BuildArch:  noarch
